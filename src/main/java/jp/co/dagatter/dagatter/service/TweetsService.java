@@ -1,7 +1,6 @@
 package jp.co.dagatter.dagatter.service;
 
 import jp.co.dagatter.dagatter.domain.Tweets;
-import jp.co.dagatter.dagatter.domain.Users;
 import jp.co.dagatter.dagatter.mapper.TweetsMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -42,13 +41,13 @@ public class TweetsService {
 
     public List<jp.co.dagatter.dagatter.model.Tweets> convertDomainListToModelList(List<Tweets> TweetsDomainList) {
         List<jp.co.dagatter.dagatter.model.Tweets> tweetsModelList = new ArrayList<jp.co.dagatter.dagatter.model.Tweets>();
-        for (Tweets TweetsDomain: TweetsDomainList) {
+        for (Tweets tweetsDomain: TweetsDomainList) {
             tweetsModelList.add(new jp.co.dagatter.dagatter.model.Tweets(
-                    TweetsDomain.getId(),
-                    TweetsDomain.getTweet(),
-                    TweetsDomain.getLike_count(),
-                    TweetsDomain.getRetweet_count(),
-                    TweetsDomain.getUser_id()));
+                    tweetsDomain.getId(),
+                    tweetsDomain.getTweet(),
+                    tweetsDomain.getLike_count(),
+                    tweetsDomain.getRetweet_count(),
+                    tweetsDomain.getUser_id()));
         }
         return tweetsModelList;
     }
