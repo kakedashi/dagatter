@@ -72,8 +72,10 @@ body{
     padding: 46px 0 0;
 }
 button{
-    outline: none;
+    outline: none!important;
     cursor: pointer;
+    background: transparent !important;
+    box-shadow: none;
 }
 
 .header{
@@ -321,6 +323,117 @@ button{
     }
     .rep{
         padding: 9px 12px;
+        position: relative;
+        display: none;
+
+
+        .content_txt{
+            margin-left: 58px;
+
+            .tweet-context_retweet{
+                font-size: 12px;
+                color: $color-gray;
+                margin-bottom: 8px;
+                .icon{
+                    vertical-align: middle;
+                    img{
+                        width: 20px;
+                        height: auto;
+                        vertical-align: middle;
+                    }
+                   
+                }
+                .txt{
+                    a{
+                        vertical-align: middle;
+                        color: $color-tweeter;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .stream-item-header{
+                margin-bottom: 8px;
+                .fullname{
+                    word-break: break-all;
+                    color: $color-txt;
+                    font-weight: bold;
+                }
+                .username{
+                    color: $color-gray;
+                }
+                .time{
+                    color: $color-gray;
+                    &::before{
+                        content: "・";
+                    }
+                }
+            }
+            .tweet-text-container{
+                margin-bottom: 16px;
+                .tweet-text{
+                    line-height: 20px;
+                    font-weight: normal;
+                    img{
+                        max-width: 90%;
+                    }
+                }
+            }
+            .stream-item-footer{
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                .ProfileTweet-action{
+                    display: inline-block;
+                    max-width: 20%;
+                    .Tweet-actionButton{
+                        color: $color-gray;
+                        display: inline-block;
+                        font-size: 16px;
+                        line-height: 1;
+                        padding: 0 21px 0 2px;
+                        position: relative;
+                        background: transparent;
+                        border: none !important;
+                        transition: box-shadow .15s ease-in-out;
+                        
+                        .Icon{
+                            vertical-align: middle;
+                            img{
+                                width: 25px;
+                                height: auto;
+                                vertical-align: middle;
+                            }
+                        }
+                        .ProfileTweet-actionCount{
+                            color: #657786;
+                            display: inline-block;
+                            font-size: 12px;
+                            font-weight: bold;
+                            line-height: 1;
+                            position: relative;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .content_img{
+            position: absolute;
+            top: 9px;
+            left:12px;
+            width: 50px;
+            .avatar{
+                img{
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                }
+                
+            }
+        }
     }
     }
 }

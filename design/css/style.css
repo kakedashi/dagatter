@@ -70,8 +70,10 @@ body {
 }
 
 button {
-  outline: none;
+  outline: none !important;
   cursor: pointer;
+  background: transparent !important;
+  box-shadow: none;
 }
 
 .header {
@@ -334,4 +336,123 @@ button {
 
 .field_tweet .tweet .rep {
   padding: 9px 12px;
+  position: relative;
+  display: none;
+}
+
+.field_tweet .tweet .rep .content_txt {
+  margin-left: 58px;
+}
+
+.field_tweet .tweet .rep .content_txt .tweet-context_retweet {
+  font-size: 12px;
+  color: #657786;
+  margin-bottom: 8px;
+}
+
+.field_tweet .tweet .rep .content_txt .tweet-context_retweet .icon {
+  vertical-align: middle;
+}
+
+.field_tweet .tweet .rep .content_txt .tweet-context_retweet .icon img {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.field_tweet .tweet .rep .content_txt .tweet-context_retweet .txt a {
+  vertical-align: middle;
+  color: #1da1f2;
+  text-decoration: none;
+}
+
+.field_tweet .tweet .rep .content_txt .stream-item-header {
+  margin-bottom: 8px;
+}
+
+.field_tweet .tweet .rep .content_txt .stream-item-header .fullname {
+  word-break: break-all;
+  color: #14171a;
+  font-weight: bold;
+}
+
+.field_tweet .tweet .rep .content_txt .stream-item-header .username {
+  color: #657786;
+}
+
+.field_tweet .tweet .rep .content_txt .stream-item-header .time {
+  color: #657786;
+}
+
+.field_tweet .tweet .rep .content_txt .stream-item-header .time::before {
+  content: "・";
+}
+
+.field_tweet .tweet .rep .content_txt .tweet-text-container {
+  margin-bottom: 16px;
+}
+
+.field_tweet .tweet .rep .content_txt .tweet-text-container .tweet-text {
+  line-height: 20px;
+  font-weight: normal;
+}
+
+.field_tweet .tweet .rep .content_txt .tweet-text-container .tweet-text img {
+  max-width: 90%;
+}
+
+.field_tweet .tweet .rep .content_txt .stream-item-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.field_tweet .tweet .rep .content_txt .stream-item-footer .ProfileTweet-action {
+  display: inline-block;
+  max-width: 20%;
+}
+
+.field_tweet .tweet .rep .content_txt .stream-item-footer .ProfileTweet-action .Tweet-actionButton {
+  color: #657786;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  padding: 0 21px 0 2px;
+  position: relative;
+  background: transparent;
+  border: none !important;
+  transition: box-shadow .15s ease-in-out;
+}
+
+.field_tweet .tweet .rep .content_txt .stream-item-footer .ProfileTweet-action .Tweet-actionButton .Icon {
+  vertical-align: middle;
+}
+
+.field_tweet .tweet .rep .content_txt .stream-item-footer .ProfileTweet-action .Tweet-actionButton .Icon img {
+  width: 25px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.field_tweet .tweet .rep .content_txt .stream-item-footer .ProfileTweet-action .Tweet-actionButton .ProfileTweet-actionCount {
+  color: #657786;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  position: relative;
+  vertical-align: middle;
+}
+
+.field_tweet .tweet .rep .content_img {
+  position: absolute;
+  top: 9px;
+  left: 12px;
+  width: 50px;
+}
+
+.field_tweet .tweet .rep .content_img .avatar img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
 }
