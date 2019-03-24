@@ -4,7 +4,9 @@ import lombok.*;
 
 @Data
 public class Tweets {
-    private Long id;
-    private String name;
-    private String imageUrl;
+    private Integer id;
+    private String tweet;
+    private Integer likeCount;
+    private Integer retweetCount;
+    private Integer userId;
 }

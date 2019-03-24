@@ -27,7 +27,7 @@ public class HomeController {
         // ツイートを取得
         List<Tweets> tweets = tweetsService.findAll();
 
-        return "home";
+        return "index";
     }
 
 }
