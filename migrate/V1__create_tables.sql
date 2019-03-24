@@ -8,12 +8,17 @@ CREATE TABLE IF NOT EXISTS tweets(
     tweet TEXT NOT NULL,
     like_count INTEGER NOT NULL,
     retweet_count INTEGER NOT NULL,
+    image_url1 text,
+    image_url2 text,
+    image_url3 text,
+    image_url4 text,
     user_id TEXT REFERENCES users(id));
 
 CREATE TABLE IF NOT EXISTS dagashis(
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
-    price INTEGER NOT NULL);
+    price INTEGER NOT NULL,
+    image_url text);
 
 CREATE TABLE IF NOT EXISTS dagashi_association(
     user_id TEXT REFERENCES users(id),
