@@ -1,0 +1,220 @@
+@charset "UTF-8";
+
+/* SCSS変数
+------------------------------------------------------------*/
+/* 色 */
+$color-base:#e6ecf0;
+$color-txt:#14171a;
+$color-gray:#657786;
+$color-tweeter:#1da1f2;
+
+/* reset
+------------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* 基本設定
+------------------------------------------------------------*/
+
+body{
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+    color: $color-txt;
+    position: relative;
+    background: $color-base;
+    overflow-y: scroll;
+}
+.site{
+    padding: 62px 0 0;
+}
+
+.header{
+    background: #FFF;
+    backface-visibility: hidden;
+    border-bottom: 1px solid #e6ecf0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    .global-nav{
+        background: #fff;
+        height: 46px;
+        .global-nav-inner{
+            max-width: 600px;
+            margin: 0 auto;
+            .container{
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 13px 16px;
+            }
+            .logo{
+                height: 20px;
+                img{
+                    width: auto;
+                    height: 21px;
+                }
+            }
+            .menu{
+                display: inline-block;
+            }
+        }
+    }
+    
+}
+.field_tweet{
+    background: #FFF;
+    max-width: 600px;
+    margin: 0 auto;
+
+    .tweet{
+    border-bottom: 1px solid $color-base;
+    position: relative;
+    min-height: 51px;
+    padding: 9px 12px;
+
+    .content{
+        position: relative;
+
+        .content_txt{
+            margin-left: 58px;
+
+            .tweet-context_retweet{
+                font-size: 12px;
+                color: $color-gray;
+                margin-bottom: 8px;
+                .icon{
+
+                }
+                .txt{
+                    a{
+                        color: $color-gray;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .stream-item-header{
+                margin-bottom: 8px;
+                .fullname{
+                    word-break: break-all;
+                    color: $color-txt;
+                    font-weight: bold;
+                }
+                .username{
+                    color: $color-gray;
+                }
+                .time{
+                    color: $color-gray;
+                    &::before{
+                        content: "・";
+                    }
+                }
+            }
+            .tweet-text-container{
+                margin-bottom: 16px;
+                .tweet-text{
+                    line-height: 20px;
+                    font-weight: normal;
+                }
+            }
+            .stream-item-footer{
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                .ProfileTweet-action{
+                    display: inline-block;
+                    max-width: 20%;
+                    .Tweet-actionButton{
+                        color: $color-gray;
+                        display: inline-block;
+                        font-size: 16px;
+                        line-height: 1;
+                        padding: 0 16px 0 2px;
+                        position: relative;
+                        background: transparent;
+                        border: none !important;
+                        transition: box-shadow .15s ease-in-out;
+                        
+                        .Icon{
+                            vertical-align: middle;
+                        }
+                        .ProfileTweet-actionCount{
+                            color: #657786;
+                            display: inline-block;
+                            font-size: 12px;
+                            font-weight: bold;
+                            line-height: 1;
+                            margin-left: 6px;
+                            position: relative;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+
+        .content_img{
+            position: absolute;
+            top: 0;
+            left:0;
+            width: 50px;
+            .avatar{
+                img{
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                }
+                
+            }
+        }
+    }
+    }
+}
