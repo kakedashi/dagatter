@@ -27,12 +27,12 @@
         <div class="field_tweet">
 
             <!-- ここから繰り返し -->
-            <div class="tweet">
+            <div class="tweet" th:each="tweet: ${tweets}">
                 <div class="content">
                     <div class="content_txt">
                         <div class="stream-item-header">
-                            <span class="fullname">名前</span>
-                            <span class="username">@<b>username</b></span>
+                            <span class="fullname">[[${tweet.getUser().name}]]</span>
+                            <span class="username">@<b>[[${tweet.getUser().id}]]</b></span>
                             <small class="time">
                                 1時間前
                             </small>
@@ -40,7 +40,7 @@
 
                         <div class="tweet-text-container">
                             <p class="tweet-text">
-                                ツイート内容が入ります。ツイート内容が入ります。ツイート内容が入ります。ツイート内容が入ります。ツイート内容が入ります。ツイート内容が入ります。
+                                [[${tweet.tweet}]]
                             </p>
                         </div><!-- tweet-text-container -->
 
@@ -58,7 +58,7 @@
                                 <button class="Tweet-actionButton">
                                     <span class="Icon"><img th:src="@{/img/icon_retweet.png}" alt=""></span>
                                     <span class="ProfileTweet-actionCount ">
-                                        100
+                                        [[${tweet.retweetCount}]]
                                     </span>
                                 </button>
                             </div>
@@ -67,7 +67,7 @@
                                 <button class="Tweet-actionButton">
                                     <span class="Icon"><img th:src="@{/img/icon_heart.png}" alt=""></span>
                                     <span class="ProfileTweet-actionCount ">
-                                        100
+                                        [[${tweet.likeCount}]]
                                     </span>
                                 </button>
                             </div>

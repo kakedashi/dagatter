@@ -6,7 +6,7 @@ import lombok.*;
 public class Tweets {
     private Integer id;
     private String tweet;
-    private Integer likeCount;
-    private Integer retweetCount;
-    private Integer userId;
+    private Integer like_count;
+    private Integer retweet_count;
+    private String user_id;
 }
