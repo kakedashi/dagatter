@@ -7,6 +7,7 @@ $color-base:#e6ecf0;
 $color-txt:#14171a;
 $color-gray:#657786;
 $color-tweeter:#1da1f2;
+$color-blue:#4479d0;
 
 /* reset
 ------------------------------------------------------------*/
@@ -70,6 +71,10 @@ body{
 .site{
     padding: 46px 0 0;
 }
+button{
+    outline: none;
+    cursor: pointer;
+}
 
 .header{
     background: url(../img/bg_header.png) no-repeat top center;
@@ -125,10 +130,11 @@ body{
     border-bottom: 1px solid $color-base;
     position: relative;
     min-height: 51px;
-    padding: 9px 12px;
+    
 
     .content{
         position: relative;
+        padding: 9px 12px;
 
         .content_txt{
             margin-left: 58px;
@@ -216,13 +222,92 @@ body{
                         }
                     }
                 }
+
+                .dagashi_menu{
+                    display: none;
+                    position: absolute;
+                    top: 110%;
+                    width: 100%;
+                    left: 0;
+
+                    .fukidashi{
+                        background: $color-blue;
+                        padding: 8px;
+                        color: #FFF;
+                        border-radius: 16px;
+                        position: relative;
+                        
+                        &:after{
+                            bottom: 100%;
+                            right: 12%;
+                            border: solid transparent;
+                            content: " ";
+                            height: 0;
+                            width: 0;
+                            position: absolute;
+                            pointer-events: none;
+                            border-color: rgba(136, 183, 213, 0);
+                            border-bottom-color: $color-blue;
+                            border-width: 10px;
+                            margin-left: -10px;
+                        }
+                        
+                        
+
+                        .line{
+                            border: 2px dotted #FFF;
+                            padding: 10px;
+                            border-radius: 8px;
+
+                            .ttl{
+                                height: 24px;
+                                margin-bottom: 8px;
+                                position: relative;
+                                img{
+                                    height: 24px;
+                                }
+                                .close{
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    color: #FFF;
+                                    font-size: 26px;
+                                    font-weight: bold;
+                                    text-decoration: none;
+                                }
+                            }
+                            .list_dagashi{
+                                ul{
+                                    display: -webkit-box;
+                                    display: -ms-flexbox;
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                    justify-content: space-between;
+                                    li{
+                                        margin: 4px 0;
+                                        width: 20%;
+                                        .click{
+                                            display: block;
+                                            padding: 8px 2px;
+                                            img{
+                                                max-width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
             }
         }
 
         .content_img{
             position: absolute;
-            top: 0;
-            left:0;
+            top: 9px;
+            left:12px;
             width: 50px;
             .avatar{
                 img{
@@ -233,6 +318,9 @@ body{
                 
             }
         }
+    }
+    .rep{
+        padding: 9px 12px;
     }
     }
 }
